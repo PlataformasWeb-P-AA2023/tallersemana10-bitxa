@@ -7,11 +7,9 @@ class Estudiante(models.Model):
         ('becado', 'Estudiante Becado'),
         ('no-becado', 'Estudiante No Becado'),
         )
-
     cedula = models.CharField(max_length=30, unique=True)
     apellido = models.CharField(max_length=30, blank=True)  # el campo puede
                                                             # ser vacio
-
     nombre = models.CharField(max_length=30)
     edad = models.IntegerField("edad de estudiante") # Verbose field names
     tipo_estudiante = models.CharField(max_length=30, \
